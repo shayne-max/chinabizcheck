@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ChinaBizCheck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1714;
+      --ink-soft: #4a4540;
+      --ink-muted: #7a7370;
+      --rule: #e8e2db;
+      --bg: #faf8f5;
+      --bg-card: #ffffff;
+      --accent: #c0392b;
+      --accent-light: #fdf0ee;
+      --tag-bg: #f0ece6;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--ink-soft);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--ink);
+      color: #fff;
+      padding: 56px 40px 48px;
+    }
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .brand-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-icon svg { width: 18px; height: 18px; fill: #fff; }
+    .brand-name {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.85);
+    }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+
+    .intro {
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 40px;
+      font-size: 17px;
+      color: var(--ink-soft);
+      line-height: 1.9;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+    .toc-title {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    @media (max-width: 600px) { .toc ol { grid-template-columns: 1fr; } }
+    .toc li { counter-increment: toc; }
+    .toc a {
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 52px; }
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-num {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid rgba(192,57,43,0.15);
+      padding: 4px 9px;
+      border-radius: 4px;
+      margin-top: 4px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin: 28px 0 12px;
+    }
+
+    p { margin-bottom: 16px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 0 0 16px;
+      padding: 0;
+    }
+    ul li {
+      font-size: 15px;
+      padding: 10px 0 10px 20px;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 20px;
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    strong { font-weight: 500; color: var(--ink); }
+
+    /* ── Highlight block ── */
+    .highlight-block {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    /* ── Tag chips ── */
+    .tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 40px;
+      font-size: 13px;
+    }
+    footer a { color: rgba(255,255,255,0.6); }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 600px) {
+      header { padding: 40px 24px 36px; }
+      .container { padding: 0 24px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0119 9.414V19a2 2 0 01-2 2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <span class="brand-name">ChinaBizCheck</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last Updated: June 4, 2026</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    Welcome to ChinaBizCheck. We are committed to protecting your privacy and ensuring a secure experience across our mobile app, tablet portal, and desktop platforms (collectively, the "Service"). This policy explains how we collect, use, disclose, and safeguard your information when you use our Service to search, verify, and generate corporate due diligence reports.
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Retention and Deletion</a></li>
+      <li><a href="#s4">Third-Party Sharing</a></li>
+      <li><a href="#s5">International Data Transfers</a></li>
+      <li><a href="#s6">Children's Privacy</a></li>
+      <li><a href="#s7">Your Rights</a></li>
+      <li><a href="#s8">Policy Changes</a></li>
+      <li><a href="#s9">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- Section 1 -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Information We Collect</h2>
+    </div>
+
+    <h3>A. Information You Provide Voluntarily</h3>
+    <ul>
+      <li><strong>Search Queries:</strong> The company names, Pinyin, or 18-digit Unified Social Credit Codes (USCC) you input to perform lookup queries.</li>
+      <li><strong>Customer Support Communications:</strong> Any information you provide when contacting us at <a href="mailto:support@chinabizcheck.org">support@chinabizcheck.org</a>, including your email address, invoice queries, or technical feedback.</li>
+    </ul>
+
+    <h3>B. Transactional and Billing Information</h3>
+    <ul>
+      <li><strong>One-Time Payments:</strong> Our Service operates on a pay-per-report model. Payments are processed through secure third-party gateways (PayPal or Stripe). We do <strong>not</strong> store your credit card details, bank credentials, or full transaction records on our servers. The billing gateway processes your payment and provides us with a transaction token to authorize report generation.</li>
+    </ul>
+
+    <h3>C. Automatically Collected Technical Data</h3>
+    <ul>
+      <li><strong>Device Characteristics:</strong> Standard operational logs — IP address, operating system, and browser/device metadata — used to optimize performance across all platforms.</li>
+      <li><strong>Service Usage Statistics:</strong> Anonymous analytics on search volume, latency, and report export status to maintain API reliability.</li>
+    </ul>
+
+    <h3>D. Advertising Data (Google AdMob)</h3>
+    <div class="highlight-block">
+      Our iOS application uses <strong>Google AdMob</strong> to serve advertisements. AdMob may collect and use certain device identifiers and usage data to deliver relevant ads.
+    </div>
+    <ul>
+      <li><strong>Advertising Identifier (IDFA / GAID):</strong> A resettable, device-level identifier used for ad targeting and measurement.</li>
+      <li><strong>Ad Interaction Data:</strong> Impressions, clicks, and engagement signals.</li>
+      <li><strong>Approximate Location:</strong> Derived from IP address only — not GPS.</li>
+    </ul>
+    <p>AdMob's data practices are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. You may opt out of interest-based advertising at any time via <strong>iOS Settings → Privacy &amp; Security → Tracking</strong>.</p>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>How We Use Your Information</h2>
+    </div>
+    <p>We process your data strictly to execute requested searches and maintain system integrity:</p>
+    <ul>
+      <li><strong>Report Generation:</strong> Using your queried company identifiers to fetch public registry data and format bilingual PDF due diligence reports.</li>
+      <li><strong>Delivery &amp; History Verification:</strong> Confirming report generation status to deliver your downloaded compliance documents.</li>
+      <li><strong>Secure Payment Authorization:</strong> Working with payment processors to confirm transaction approvals for individual reports.</li>
+      <li><strong>Advertising:</strong> Displaying ads through Google AdMob to support continued service availability.</li>
+      <li><strong>Customer Care:</strong> Handling refund reviews, transmission issues, or general support queries.</li>
+    </ul>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Data Retention and Deletion</h2>
+    </div>
+    <ul>
+      <li><strong>Search Metadata:</strong> Generated reports and their search parameters are stored temporarily in an encrypted environment for up to <strong>90 days</strong> to facilitate re-download in the event of interruptions.</li>
+      <li><strong>Your Control:</strong> You may request permanent deletion of your search and query history at any time by emailing <a href="mailto:support@chinabizcheck.org">support@chinabizcheck.org</a>. We will purge all relevant files and metadata within <strong>30 days</strong> of receiving a verified request.</li>
+    </ul>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Third-Party Sharing and Data Transfers</h2>
+    </div>
+    <p>We do not sell, rent, or trade your personal data. We share relevant data only with the following trusted service providers:</p>
+    <ul>
+      <li><strong>Corporate Registry API Gateways:</strong> Real-time lookup parameters (company name or USCC) are securely transmitted to Mainland China business registry services to fetch active government records. No personal searcher information is passed to these registries.</li>
+      <li><strong>Payment Gateways (PayPal, Stripe):</strong> Secure payment processing under their respective privacy policies.</li>
+      <li><strong>Google AdMob:</strong> Advertising identifier and anonymised usage signals for ad delivery. See Section 1(D).</li>
+      <li><strong>Hosting Partners:</strong> Secured cloud infrastructure providers protecting our file storage and database environment.</li>
+    </ul>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>International Data Transfers</h2>
+    </div>
+    <p>When using ChinaBizCheck, search queries are routed globally to query Chinese corporate registries. By performing queries and generating reports, you acknowledge and consent to international data processing in accordance with applicable privacy laws.</p>
+  </section>
+
+  <!-- Section 6 -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Children's Privacy</h2>
+    </div>
+    <div class="highlight-block">
+      ChinaBizCheck is intended solely for use by <strong>business professionals aged 18 and over</strong>.
+    </div>
+    <p>We do not knowingly collect personal information from children under the age of 13 (or under the applicable age of digital consent in your jurisdiction). If you believe we have inadvertently collected such information, please contact us immediately at <a href="mailto:support@chinabizcheck.org">support@chinabizcheck.org</a> so that we may delete it promptly.</p>
+  </section>
+
+  <!-- Section 7 -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Your Rights</h2>
+    </div>
+    <p>Depending on your jurisdiction, you may have the following rights:</p>
+    <ul>
+      <li>The right to access information we hold related to your billing transactions or search history.</li>
+      <li>The right to request deletion of your historical report downloads and associated metadata.</li>
+      <li>The right to opt out of interest-based advertising (see Section 1(D)).</li>
+      <li>The right to object to further analytical tracking.</li>
+    </ul>
+    <p>Applicable frameworks: <span class="tag">GDPR</span> <span class="tag">CCPA</span> <span class="tag">PDPA</span> <span class="tag">PIPEDA</span></p>
+    <p style="margin-top:12px">To exercise any of these rights, contact us at <a href="mailto:support@chinabizcheck.org">support@chinabizcheck.org</a>.</p>
+  </section>
+
+  <!-- Section 8 -->
+  <section class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Changes to This Privacy Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of the Service following such changes constitutes your acceptance of the revised policy.</p>
+  </section>
+
+  <!-- Section 9 -->
+  <section class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Contact Us</h2>
+    </div>
+    <p>If you have questions, disputes, or concerns regarding your privacy, please reach out to us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:support@chinabizcheck.org">support@chinabizcheck.org</a></li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 ChinaBizCheck. All rights reserved. &nbsp;·&nbsp; <a href="eula.html">End User License Agreement</a></p>
+</footer>
+
+</body>
+</html>
